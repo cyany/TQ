@@ -13,7 +13,6 @@
 	</div>
 </template>
 <script type="text/javascript">
-var echarts = require('echarts');
 export default  {
 	name:'echart',
 	data(){
