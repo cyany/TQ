@@ -17,6 +17,10 @@ import media from '@/components/media'
 import ankerIndex from '@/components/ankerIndex'
 import ankerProduct from '@/components/ankerProduct'
 import dashboard from '@/components/dashboard'
+import guide from '@/components/guide'
+import timeNote from '@/components/timeNote'
+import monthNote from '@/components/monthNote'
+import lists from '@/components/lists'
 
 
 Vue.use(Router)
@@ -100,6 +104,11 @@ export default new Router({
       component:ankerProduct
     },
     {
+      path:'/lists',
+      name:'lists',
+      component:lists
+    },
+    {
       path:'/signup',
       name:'signup',
       component:signup
@@ -108,6 +117,21 @@ export default new Router({
       path:'/dashboard',
       name:'dashboard',
       component:dashboard
+    },
+    {
+      path:'/guide',
+      name:'guide',
+      component:guide
+    },
+    {
+      path:'/timeNote',
+      name:'timeNote',
+      component:timeNote
+    },
+    {
+      path:'/monthNote',
+      name:'monthNote',
+      component:monthNote
     }
 
   ]

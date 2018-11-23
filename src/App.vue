@@ -24,8 +24,18 @@
                     <el-menu-item index="1-3"><router-link to="./categoies">选项2</router-link></el-menu-item>
                   </el-menu-item-group>
                 </el-submenu>
-              
-           
+                  <el-menu-item index="2">
+                    <router-link to="/guide"><i class="el-icon-news">Guide</i></router-link>
+                  </el-menu-item>
+                  <el-menu-item index="3">
+                    <router-link to="/timeNote"><i class="el-icon-news">timeNote</i></router-link>
+                  </el-menu-item>
+                  <el-menu-item index="4">
+                    <router-link to="/monthNote"><i class="el-icon-news">monthNote</i></router-link>
+                  </el-menu-item>
+                  <el-menu-item index="5">
+                    <router-link to="/lists"><i class="el-icon-news">lists</i></router-link>
+                  </el-menu-item>
               </el-menu>
             </el-col>
           </el-row>
