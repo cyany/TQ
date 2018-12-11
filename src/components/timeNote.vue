@@ -8,7 +8,7 @@
 		    </el-col>
 		</el-row>
 		<el-row>
-		    <el-col :xs="24">
+		    <!-- <el-col :xs="24">
 		       <table>
 		       	<tr>
 		       		<td>xx</td>
@@ -69,6 +69,15 @@
 		       		<td><el-input v-model="noteIndex11_2" placeholder=""></el-input></td>
 		       	</tr>
 		       </table>
+		    </el-col> -->
+		    <el-col :xs="24">
+		        <table>
+		        	<tr v-for="(item,index) in inputArr" v-key="index">
+		        		<td>{{String(index).length==1?"0"+index+":00":index+":00"}}</td>
+		       		<td><el-input v-model="item.val" placeholder=""></el-input></td>
+		       		<td><el-input v-model="item.val2" placeholder=""></el-input></td>
+		        	</tr>
+		        </table>
 		    </el-col>
 		    <el-col :xs="12" :sm="3" style="margin-top: 20px;">
 		        <!-- content -->
@@ -82,31 +91,33 @@
 		name:'timeNote',
 		data(){
 			return {
+				inputArr:[
+					{val:'',val2:''},
+					{val:'',val2:''},
+					{val:'',val2:''},
+					{val:'',val2:''},
+					{val:'',val2:''},
+					{val:'',val2:''},
+					{val:'',val2:''},
+					{val:'',val2:''},
+					{val:'',val2:''},
+					{val:'',val2:''},
+					{val:'',val2:''},
+					{val:'',val2:''},
+					{val:'',val2:''},
+					{val:'',val2:''},
+					{val:'',val2:''},
+					{val:'',val2:''},
+					{val:'',val2:''},
+					{val:'',val2:''},
+					{val:'',val2:''},
+					{val:'',val2:''},
+					{val:'',val2:''},
+					{val:'',val2:''},
+					{val:'',val2:''},
+					{val:'',val2:''}
+				],
 				time1:'',
-				noteIndex0_1:'',
-				noteIndex0_2:'',
-				noteIndex1_1:'',
-				noteIndex1_2:'',
-				noteIndex2_1:'',
-				noteIndex2_2:'',
-				noteIndex3_1:'',
-				noteIndex3_2:'',
-				noteIndex4_1:'',
-				noteIndex4_2:'',
-				noteIndex5_1:'',
-				noteIndex5_2:'',
-				noteIndex6_1:'',
-				noteIndex6_2:'',
-				noteIndex7_1:'',
-				noteIndex7_2:'',
-				noteIndex8_1:'',
-				noteIndex8_2:'',
-				noteIndex9_1:'',
-				noteIndex9_2:'',
-				noteIndex10_1:'',
-				noteIndex10_2:'',
-				noteIndex11_1:'',
-				noteIndex11_2:'',
 			}
 		},
 		mounted(){
@@ -115,8 +126,10 @@
 		},
 		methods:{
 			submitInfo(){
-				if(this.noteIndex0_1==""){
-					this.$alert('未编辑完成', '标题名称', {
+				console.log(this.inputArr);
+				for(let i of this.inputArr){
+					if(i.val=="" || i.val2==""){
+						this.$alert('未编辑完成', '标题名称', {
 					          confirmButtonText: '确定',
 					          callback: action => {
 					            this.$message({
@@ -125,6 +138,8 @@
 					            });
 					          }
 					        });
+						return false;
+					}
 				}
 			}
 		}
