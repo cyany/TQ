@@ -21,6 +21,7 @@ import guide from '@/components/guide'
 import timeNote from '@/components/timeNote'
 import monthNote from '@/components/monthNote'
 import lists from '@/components/lists'
+import addProduct from '@/components/addProduct'
 
 
 Vue.use(Router)
@@ -132,6 +133,11 @@ export default new Router({
       path:'/monthNote',
       name:'monthNote',
       component:monthNote
+    },
+    {
+      path:'/addProduct',
+      name:'addProduct',
+      component:addProduct
     }
 
   ]

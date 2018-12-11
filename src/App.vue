@@ -36,6 +36,9 @@
                   <el-menu-item index="5">
                     <router-link to="/lists"><i class="el-icon-news">lists</i></router-link>
                   </el-menu-item>
+                  <el-menu-item index="6">
+                    <router-link to="/addProduct"><i class="el-icon-news">addProduct</i></router-link>
+                  </el-menu-item>
               </el-menu>
             </el-col>
           </el-row>
